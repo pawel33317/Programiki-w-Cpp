@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1405040941 source:c:\progcpp\lambda wyrazenia\main.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<ctime>
+	<cstdlib>
+	<algorithm>
+

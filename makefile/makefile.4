@@ -1,0 +1,33 @@
+#CEL: SKLADNIKI
+#	KOMENDA
+
+#< - aktualnie przetwarzany plik z listy składników (patrz przykład)
+#@ - nazwa pliku docelowego
+#^ - składniki
+
+#####ZMIENNE
+
+
+CXX=g++			#nazwa kompilatora
+CXXLAGS=-c 		#opcje kompilatora -c compile and assembly not link
+LFLAGS=			#opcje linkera
+OBJS=main.o exampleClas.o class2.o
+
+
+#####LINKOWANIE
+
+
+prog: $(OBJS)
+	$(CXX) $(LFLAGS) $^ -o $@
+
+
+#####KOMPILACJA
+
+main.o: main.cpp
+	$(CXX) $(CXXLAGS) $< -o $@
+
+exampleClas.o: exampleClas.cpp
+	$(CXX) $(CXXLAGS) $< -o $@
+
+class2.o: class2.cpp
+	$(CXX) $(CXXLAGS) $< -o $@

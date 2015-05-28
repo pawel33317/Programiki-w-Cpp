@@ -1,0 +1,14 @@
+#CEL: SKLADNIKI
+#	KOMENDA
+
+prog: main.o exampleClas.o class2.o
+	g++ main.o class2.o exampleClas.o -o prog
+
+main.o: main.cpp
+	g++ -c main.cpp -o main.o
+
+exampleClas.o: exampleClas.cpp
+	g++ -c exampleClas.cpp -o exampleClas.o
+
+class2.o: class2.cpp
+	g++ -c class2.cpp -o class2.o

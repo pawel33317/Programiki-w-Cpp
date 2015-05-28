@@ -1,0 +1,97 @@
+#ifndef __Complex_H__
+#define __Complex_H__
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+class Complex
+{
+	private:
+	double Real , Imag ;
+	public:
+	Complex (double a = 0, double b = 0);	//konstruktor
+	~Complex();	//destruktor
+	
+	//double faza(Complex co);
+	//double modul(Complex co);
+	
+	//funkcja zaprzyjazniona obslugi strumienia wyjscia
+	friend ostream& operator<<(ostream& os , Complex& ob);
+			
+	Complex operator+(Complex co);
+	Complex operator-(Complex co);
+	
+	Complex operator*(Complex co);
+	Complex operator/(Complex co);
+	
+	
+	
+	
+};
+
+
+//konstruktor
+Complex::Complex(double a, double b)
+{
+	Real=a;
+	Imag=b;
+}
+
+//destruktor
+Complex::~Complex()
+{
+}
+
+double faza(Complex co)
+{
+	return atan(co.Real/co.Imag);
+}
+
+double modul(Complex co)
+{
+	return sqrt(co.Real * co.Real + co.Imag * co.Imag);
+}
+
+//funkcja obslugi strumienia
+ostream& operator<<(ostream& os, Complex& ob)
+{
+	os << "Real = " << ob.Real << "  Imag = " << ob.Imag;
+	return os;
+}
+/* PLUS juz dobrze */
+Complex Complex::operator+(Complex co)
+{
+	Complex n;
+	n.Real=this->Real+co.Real;
+	n.Imag=this->Imag+co.Imag;
+	return n;
+}
+
+/* MINUS juz dobrze */
+Complex Complex::operator-(Complex co)
+{
+	Complex n;
+	n.Real=this->Real-co.Real;
+	n.Imag=this->Imag-co.Imag;
+	return n;
+}
+
+Complex Complex::operator* (Complex co)
+{
+	Complex n;
+	n.Real = (this->Real * co.Real - this->Imag * co.Imag);
+	n.Imag = (this->Real * co.Imag + this->Imag * co.Real);
+	return n;
+}
+
+Complex Complex::operator/ (Complex co)
+{
+	Complex n;
+	n.Real = (this->Real * co.Real + this->Imag * co.Imag) / co.modul(co);
+	n.Imag = (this->Imag * co.Real - this->Real * co.Imag) / co.modul(co);
+	return n;
+}
+
+
+#endif /* __Complex_H__ */

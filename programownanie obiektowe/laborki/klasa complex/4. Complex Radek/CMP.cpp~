@@ -1,0 +1,53 @@
+#ifndef __Complex_H__
+#define __Complex_H__
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+class Complex
+{
+	private:
+	double Real , Imag ;
+	public:
+	friend Complex (double Real = 0, double Imag = 0);	//konstruktor
+	friend ~Complex	//destruktor
+	friend Complex Complex::operator+ (Complex co)
+	friend Complex Complex::operator- (Complex co);
+	
+}
+
+
+//konstruktor
+friend Complex::Complex(double Real, double Imag)
+{
+	this->Real=Real;
+	this->Imag=Real;
+}
+
+//destruktor
+friend Complex::~Complex()
+{
+}
+
+
+/* PLUS juz dobrze */
+friend Complex Complex::operator+(Complex co)
+{
+	Complex n;
+	n.Real=this->Real+co.Real;
+	n.Imag=this->Imag+co.Imag;
+	return n;
+}
+
+/* MINUS juz dobrze */
+friend Complex Complex::operator-(Complex co)
+{
+	Complex n;
+	n.Real=this->Real+co.Real;
+	n.Imag=this->Imag+co.Imag;
+	return n;
+}
+
+
+#endif /* __Complex_H__ */

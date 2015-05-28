@@ -1,0 +1,18 @@
+<io.h>	<sys\stat.h>
+
+int fi=sopen(char*name,O_RDWR|O_BINARY,SH_DENYNO); //otwieranie pliku
+			O_RDONLY|O_TEXT	SH_DENYRW
+			O_APPEND	SH_DENYWR
+
+int fi = sopen(char *name,O_CREAT|ORDWR|O_TEXT|O_TRUNC,SH_DENYNO,SHIREAD|S_WRITE);
+close(fi);
+
+
+int   				read(fi,buf,			len);
+iloœæ  wczytanych bajtów		adres bufora		ile wczytaæ bajtów
+
+write(fi,buf,len));
+eof(fi);
+lseek===fseek
+filelenght(fi); d³ugoœæ pliku
+fdopen(fi,modde); z uchwytu strumieñ

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1405042524 source:c:\progcpp\przeciazenia operatorow 2\main.cpp
+	<iostream>
+	"CVector2D.hpp"
+
+1404886747 c:\progcpp\przeciazenia operatorow 2\cvector2d.hpp
+

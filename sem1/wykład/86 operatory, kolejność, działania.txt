@@ -1,0 +1,44 @@
+() [] -> .
+! - + ++ --
+* / %
++ - 
+<< >> operatory bitowe przejœcia
+	zm=1001101..0
+	zm>>2=001001101...0
+	zm<<2=01101...0
+	zm>> zmienna zmniejszaba |1zm|2^n
+	zm<< zmienna zwiêkszana zm*2^n
+	long g;
+	g>>24 nzjstarszy bit
+	(g<<24)>> najm³odszy bit
+<<= >>=
+== !=
+& 
+^
+|
+&&
+
+
+zm&zm1
+0101
+0011
+____
+0001
+
+
+
+zm|zm1
+1001
+0101
+____
+1101
+
+
+zm^zm1
+1001
+0101
+____
+1100
+
+
+(bajt^klucz)^klucz=bajt

@@ -1,0 +1,27 @@
+double Phase(Complex co)
+  {
+    double phase;
+    double p;
+    if(co.Real == 0 || co.Imag == 0)
+    {
+      if(co.Real == 0)
+      {
+   co.Imag < 0 ? phase = -M_PI/2 : phase = M_PI/2;
+   if(co.Imag == 0)
+   {
+     co.Real < 0 ? phase = M_PI : phase = 0;
+   }
+      }
+    }
+   
+    p = atan(Abs(co.Imag/co.Real));
+    if(co.Imag < 0)
+    {
+      co.Real < 0 ? phase = -(M_PI - p) : phase = -p;
+    }
+    if(co.Imag > 0)
+    {
+      co.Real > 0 ? phase = p : phase = M_PI -p;
+    }   
+    return phase;
+  }

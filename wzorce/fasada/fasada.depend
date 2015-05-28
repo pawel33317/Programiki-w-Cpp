@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1405214222 source:c:\progcpp\wzorce\fasada\main.cpp
+	<cstdio>
+	<string>
+	<set>
+

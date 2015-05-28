@@ -1,0 +1,30 @@
+#CEL: SKLADNIKI
+#	KOMENDA
+
+
+#####ZMIENNE
+
+
+CXX=g++			#nazwa kompilatora
+CXXLAGS=-c 		#opcje kompilatora
+LFLAGS=			#opcje linkera
+OBJS=main.o exampleClas.o class2.o
+
+
+#####LINKOWANIE
+
+
+prog: $(OBJS)
+	$(CXX) $(LFLAGS) main.o class2.o exampleClas.o -o prog
+
+
+#####KOMPILACJA
+
+main.o: main.cpp
+	$(CXX) $(CXXLAGS) main.cpp -o main.o
+
+exampleClas.o: exampleClas.cpp
+	$(CXX) $(CXXLAGS) exampleClas.cpp -o exampleClas.o
+
+class2.o: class2.cpp
+	$(CXX) $(CXXLAGS) class2.cpp -o class2.o

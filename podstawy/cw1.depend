@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1404350562 source:c:\progcpp\cw1\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+

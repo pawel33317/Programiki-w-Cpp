@@ -1,0 +1,3 @@
+VAR(x,6)//¿eby siê po³¹czy³y w nazwê x6
+#define VAR (i,j) ij //Ÿle
+#define VAR (i,j) i##j //ok

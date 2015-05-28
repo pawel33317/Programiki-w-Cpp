@@ -1,0 +1,8 @@
+[typedef] union
+{
+short liczba;
+char znak[2];
+}u;
+
+
+wszystkie zmienne zaczynaj¹ siê od tego samego adresu czyli chujnia

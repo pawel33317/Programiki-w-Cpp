@@ -1,0 +1,7 @@
+	KOMPILACJA
+->	preprocesor
+		szuka dyrektyw # tworzy plik i daje do kompilatora w³aœciwego
+->	kompilator w³aœciwy
+		z .cpp, .c tworzy obj do³¹cza biblioteki .lib i inne pliki .obj
+->	linker
+		³¹czy wszystko w ca³oœæ .exe

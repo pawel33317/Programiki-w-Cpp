@@ -1,0 +1,16 @@
+char *s wskaŸnik nie zainicjiwany je¿eli jest w funkcji to ma wartoœæ przypadkow¹ je¿eli poza to 0
+
+t[81] rezerwuje 81 bajtów tablice w c s¹ traktowane jako wskaŸniki
+
+char ttt[]="acs" zadeklatuje 4 bajty pamiêci
+
+
+const char *p; ³añcuch wskazywany przez p nie mo¿e byæ zmieniony
+p=&bajt; ok
+*p="x" ¿le
+
+char *const r 
+r=&bajt Ÿle
+*r="x" ok
+
+volitate czêsco zmieniana
